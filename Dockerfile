@@ -10,11 +10,16 @@ COPY package*.json ./
 # Instale as dependências
 RUN npm install
 
+# instale axios
+RUN npm install axios
+
 # Copie o restante do código do frontend
 COPY . .
 
 # Compile o projeto React
 RUN npm run build
+
+
 
 # Use um servidor estático para servir o build
 RUN npm install -g serve
