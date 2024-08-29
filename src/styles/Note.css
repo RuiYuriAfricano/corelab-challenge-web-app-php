@@ -25,14 +25,19 @@
 }
 
 .palette {
-    margin-left: 3px;
-    height: 13.5px;
+    margin-left: 5px;
+    height: 24px;
+    width: 24px;
     margin-top: 2px;
     cursor: pointer;
+    color: #51646E;
 }
 
 .edit {
     cursor: pointer;
+    width: 24px;
+    height: 24px;
+    color: #51646E;
 }
 
 .edit-content {
@@ -54,6 +59,10 @@
 .remove {
     margin-left: 300px;
     cursor: pointer;
+    width: 24px;
+    height: 24px;
+    color: #51646E;
+    font-size: 12px;
 }
 
 .star-icon {
@@ -66,11 +75,31 @@
 
 .guardar {
     position: relative;
-    bottom: 290px;
-    padding: 5px 5px;
-    background-color: inherit;
-    border-radius: 3px;
+    bottom: 300px;
+    left: 270px;
+    background-color: #333;
+    /* Cor do botão */
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 5px #111;
+    /* Sombra para o efeito 3D */
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
 
+}
+
+.guardar:active {
+    transform: translateY(5px);
+    /* Move o botão para baixo ao clicar */
+    box-shadow: 0 2px #111;
+    /* Ajusta a sombra ao clicar */
 }
 
 .guardar:focus {
