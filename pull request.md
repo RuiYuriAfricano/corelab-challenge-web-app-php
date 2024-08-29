@@ -107,9 +107,9 @@ Docker no Projeto
 No projeto, Docker foi utilizado para criar contêineres tanto para o backend quanto para o frontend. Os contêineres são definidos em arquivos Dockerfile, que especificam as dependências necessárias, comandos de construção e portas a serem expostas.
 
 root/
-├── backend (Laravel)
+├── corelab-api-challenge-php (Backend-Laravel)
 │   └── Dockerfile
-├── frontend (React)
+├── corelab-challenge-web-app-php (RFrontend-React)
 │   └── Dockerfile
 └── docker-compose.yml
 
@@ -126,7 +126,7 @@ Clone os Repositórios dentro do mesmo diretório:
 
 Frontend: git clone https://github.com/RuiYuriAfricano/corelab-challenge-web-app-php
 Backend: git clone https://github.com/RuiYuriAfricano/corelab-api-challenge-php 
-Dentro do diretório em que se clonou, deve-se colar o arquivo docker-compose.yml (que se encontra dentro do diretório do frontend):
+Dentro do diretório em que se clonou, deve-se colar o arquivo docker-compose.yml (que se encontra dentro do diretório corelab-challenge-web-app-php):
 
 
 Build e Start dos Contêineres:
