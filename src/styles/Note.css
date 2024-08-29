@@ -1,0 +1,101 @@
+.note {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative;
+    width: 390px;
+    height: 437.59px;
+}
+
+.note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 2px #fff;
+    margin-bottom: 20px;
+}
+
+.note-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+    top: 277px;
+}
+
+.palette {
+    margin-left: 3px;
+    height: 13.5px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.edit {
+    cursor: pointer;
+}
+
+.edit-content {
+    width: 350px;
+    height: 300px;
+    background-color: inherit;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 3px;
+    resize: none;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edit-content:focus {
+    border: none;
+}
+
+.remove {
+    margin-left: 300px;
+    cursor: pointer;
+}
+
+.star-icon {
+    cursor: pointer;
+}
+
+.favorite {
+    color: gold;
+}
+
+.guardar {
+    position: relative;
+    bottom: 290px;
+    padding: 5px 5px;
+    background-color: inherit;
+    border-radius: 3px;
+
+}
+
+.guardar:focus {
+    border: none;
+}
+
+.color-picker {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    position: absolute;
+    top: 10px;
+    background-color: #fff;
+    padding-left: 10px;
+    border-radius: 9px;
+    width: 574.61px;
+    height: 46.46px;
+    border: 1px;
+
+}
+
+.color-swatch {
+    width: 36.71px;
+    height: 36.71px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 5px;
+}
