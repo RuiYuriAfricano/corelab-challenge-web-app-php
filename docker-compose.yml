@@ -1,0 +1,41 @@
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: mydatabase
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  backend:
+    build:
+      context: ./corelab-api-challenge-php
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: "mysql://root:password@db:3306/mydatabase"
+    volumes:
+      - ./corelab-api-challenge-php:/var/www
+    depends_on:
+      - db
+    command: >
+      sh -c " php artisan migrate && php artisan serve --host=127.0.0.1 --port=8000 "
+
+  frontend:
+    build:
+      context: ./corelab-challenge-web-app-php
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
+
+volumes:
+  mysql-data:
