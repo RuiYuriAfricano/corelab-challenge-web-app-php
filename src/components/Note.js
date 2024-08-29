@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { CIcon } from '@coreui/icons-react'
+import { cilColorFill, cilPencil } from '@coreui/icons'
 import '../styles/Note.css';
-import { FaStar, FaEdit, FaPalette, FaTimes } from 'react-icons/fa';
+import { FaStar, FaTimes } from 'react-icons/fa';
 
 function Note({ note, toggleFavorite, deleteNote, editNote }) {
     const [isEditing, setIsEditing] = useState(false);
@@ -29,6 +31,7 @@ function Note({ note, toggleFavorite, deleteNote, editNote }) {
                     className={`star-icon ${note.isFavorite ? 'favorite' : ''}`}
                     onClick={() => toggleFavorite(note.id)}
                 />
+
             </div>
             {isEditing ? (
                 <textarea
@@ -41,9 +44,10 @@ function Note({ note, toggleFavorite, deleteNote, editNote }) {
             )}
 
             <div className="note-footer">
-                <FaEdit className='edit' onClick={handleEdit} />
+
+                <CIcon className='edit' icon={cilPencil} size="xs" onClick={handleEdit} />
                 {isEditing ? <button className='guardar' onClick={handleSave}>Guardar</button> : null}
-                <FaPalette className='palette' onClick={() => setShowColorPicker(!showColorPicker)} />
+                <CIcon className='palette' icon={cilColorFill} onClick={() => setShowColorPicker(!showColorPicker)} />
                 {showColorPicker && (
                     <div className="color-picker">
                         {[
