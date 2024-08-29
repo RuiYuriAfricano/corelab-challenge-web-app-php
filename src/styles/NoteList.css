@@ -1,0 +1,33 @@
+.note-list {
+    padding-left: 144.28px;
+}
+
+.notes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.note-list h5 {
+    font-weight: normal;
+}
+
+@media (max-width: 768px) {
+    .note-list {
+        padding-left: 0;
+    }
+
+    .notes-grid {
+        justify-content: center;
+    }
+
+    .note {
+        max-width: 100%;
+    }
+
+    .note-list h5 {
+        margin-left: 45px;
+        margin-top: 30px;
+        margin-bottom: 2px;
+    }
+}
